@@ -7,6 +7,6 @@ type Home struct{
 }
 
 type HomeMessage struct{
-	Username string
-	Message string
+	Username string `json:"username"`
+	Message string	`json:"message"`
 }
