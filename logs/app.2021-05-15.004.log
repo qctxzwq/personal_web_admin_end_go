@@ -1,0 +1,10 @@
+2021/05/15 20:25:28.582 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 20:26:09.982 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 20:27:20.125 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 20:34:17.525 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 20:34:17.949 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 20:34:18.768 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 20:44:19.614 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 20:44:19.999 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 20:44:25.076 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|     1.3669ms|   match|[46m POST    [0m /login   r:/login
+2021/05/15 20:44:45.301 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|      516.6µs|   match|[46m POST    [0m /login   r:/login

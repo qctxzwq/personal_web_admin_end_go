@@ -1,0 +1,10 @@
+2021/05/15 13:02:43.190 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 13:04:24.394 [E] [main.go:14]  database connect failed: dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it. 
+2021/05/15 13:04:24.451 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 13:04:29.228 [D] [server.go:2887]  |            ::1|[42m 200 [0m|     1.0358ms|   match|[44m GET     [0m /     r:/
+2021/05/15 13:04:29.775 [D] [server.go:2887]  |            ::1|[42m 200 [0m|      260.3µs|   match|[44m GET     [0m /     r:/
+2021/05/15 13:04:30.348 [D] [server.go:2887]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /     r:/
+2021/05/15 13:16:52.579 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 19:57:35.948 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 19:57:36.718 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/15 19:57:37.526 [I] [asm_amd64.s:1371]  http server Running on http://:8080

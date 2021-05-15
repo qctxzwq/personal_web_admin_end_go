@@ -10,7 +10,6 @@ type MainController struct {
 	beego.Controller
 }
 
-
 func (m *MainController) AdminHome () {
 	username := m.GetString("username")
 	homeMes :=  models.HomeMessage{
