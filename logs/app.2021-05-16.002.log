@@ -1,0 +1,10 @@
+2021/05/16 00:11:21.607 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/16 00:11:22.544 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/16 00:11:23.419 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/16 00:11:25.873 [E] [user.go:42]  insert user%v to database failed,err:%v Error 1062: Duplicate entry '1' for key 'PRIMARY' 
+2021/05/16 00:11:25.874 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    66.3694ms|   match|[46m POST    [0m /login   r:/login
+2021/05/16 00:13:44.241 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/16 00:13:49.905 [E] [user.go:42]  insert user%v to database failed,err:%v Error 1062: Duplicate entry '1' for key 'PRIMARY' 
+2021/05/16 00:13:49.909 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    74.4323ms|   match|[46m POST    [0m /login   r:/login
+2021/05/16 00:14:14.931 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/16 00:14:20.677 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    69.8188ms|   match|[46m POST    [0m /login   r:/login
