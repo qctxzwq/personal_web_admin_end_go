@@ -1,0 +1,10 @@
+2021/05/16 16:59:15.952 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/16 16:59:16.762 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/16 16:59:17.578 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/16 16:59:18.375 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/16 16:59:24.527 [I] [user.go:49]  user not exist {false 123 13 } 
+2021/05/16 16:59:24.527 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    16.7393ms|   match|[46m POST    [0m /login   r:/login
+2021/05/16 16:59:55.879 [I] [user.go:49]  user not exist {false 123 1 } 
+2021/05/16 16:59:55.879 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    15.6172ms|   match|[46m POST    [0m /login   r:/login
+2021/05/16 16:59:56.904 [I] [user.go:49]  user not exist {false 123 1 } 
+2021/05/16 16:59:56.905 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    15.8886ms|   match|[46m POST    [0m /login   r:/login

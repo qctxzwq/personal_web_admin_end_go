@@ -1,3 +1,2 @@
-2021/05/16 00:52:43.365 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    14.7482ms|   match|[46m POST    [0m /login   r:/login
-2021/05/16 00:52:48.131 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    14.3904ms|   match|[46m POST    [0m /login   r:/login
-2021/05/16 00:53:03.880 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    17.6501ms|   match|[46m POST    [0m /login   r:/login
+2021/05/16 17:42:10.554 [I] [user.go:49]  user not exist {false 123 1 } 
+2021/05/16 17:42:10.556 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    17.0941ms|   match|[46m POST    [0m /login   r:/login
