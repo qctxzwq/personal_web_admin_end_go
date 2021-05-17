@@ -16,6 +16,7 @@ var (
 	UserList map[string]*Users
 )
 
+// 登录必传字段
 type LoginMes struct {
 	AutoLogin bool   `json:"type"`
 	Name      string `json:"name"`
@@ -23,6 +24,7 @@ type LoginMes struct {
 	LoginType string `json:"type"`
 }
 
+// 用户基本信息
 type Users struct {
 	Id       int        `json:"id";gorm:"primaryKey"`
 	Name     string     `json:"name"`
@@ -32,24 +34,22 @@ type Users struct {
 	Ctime    int64      `json:"ctime"`
 }
 
+// 登录成功的用户信息
 type UserInfo struct {
-	UserInfo Users `json:"user_info"`
+	UserInfo map[string]interface{} `json:"user_info"`
+	Token    string                 `json:"token"`
 }
 
+// 登录成功
 type LoginSuccess struct {
 	Code    int      `json:"code"`
 	Data    UserInfo `json:"data"`
 	Message string   `json:"message"`
 }
 
+// 登陆失败
 type LoginFailed struct {
 	Code    int
 	Message string
 }
 
-func Login(username, password string) bool {
-	if username == "zhang" && password == "123" {
-		return true
-	}
-	return false
-}

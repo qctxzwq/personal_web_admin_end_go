@@ -65,9 +65,34 @@ func (u *UserController) Login() {
 		u.ServeJSON()
 		return
 	}
+
+	// 创建token
+	token, err := until.CreateToken(destUser)
+	if err != nil {
+		errRes := models.SystemError{
+			Code:    models.TOKEN_CREATE_ERROR_CODE,
+			Message: models.SYSTEM_ERROR_MSG,
+		}
+		errLogMsg := fmt.Sprintf("userId:%v,create token failed,err:%v", destUser.Id, err)
+		beego.Error(errLogMsg)
+		u.Data["json"] = errRes
+		u.ServeJSON()
+		return
+	}
+	// 组合数据
+	info :=  make(map[string]interface{})
+	info["id"] = destUser.Id
+	info["name"] = destUser.Name
+	info["status"] = destUser.Status
+	info["avatar"] = destUser.Avatar
+	info["ctime"] = destUser.Ctime
+	userInfo := models.UserInfo{
+		UserInfo: info,
+		Token:    token,
+	}
 	mes := &models.LoginSuccess{
 		Code:    0,
-		Data:    models.UserInfo{destUser},
+		Data:    userInfo,
 		Message: "登录成功!",
 	}
 	u.Data["json"] = mes

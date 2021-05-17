@@ -1,0 +1,10 @@
+2021/05/16 17:42:10.554 [I] [user.go:49]  user not exist {false 123 1 } 
+2021/05/16 17:42:10.556 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    17.0941ms|   match|[46m POST    [0m /login   r:/login
+2021/05/17 10:48:22.885 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/17 10:49:41.428 [I] [user.go:49]  user not exist {false zhang 123 } 
+2021/05/17 10:49:41.429 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|   28.70583ms|   match|[97;46m POST    [0m /login   r:/login
+2021/05/17 10:49:54.241 [E] [encryption.go:23]  password compare error: crypto/bcrypt: hashedPassword is not the hash of the given password 
+2021/05/17 10:49:54.241 [D] [user.go:63]  user password error: {false admin 123 } 
+2021/05/17 10:49:54.241 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  17.786241ms|   match|[97;46m POST    [0m /login   r:/login
+2021/05/17 10:49:59.093 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  67.583396ms|   match|[97;46m POST    [0m /login   r:/login
+2021/05/17 10:54:04.150 [I] [asm_amd64.s:1374]  http server Running on http://:8080

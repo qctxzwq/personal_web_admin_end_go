@@ -14,6 +14,7 @@ func init() {
 		beego.Error("database connect failed:", err)
 		return
 	}
+	models.InitRouteAuth()
 }
 
 func main() {
