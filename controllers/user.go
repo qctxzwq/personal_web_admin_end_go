@@ -5,8 +5,8 @@ import (
 	"admin/until"
 	"encoding/json"
 	"fmt"
+
 	"github.com/astaxie/beego"
-	"time"
 )
 
 type UserController struct {
@@ -23,7 +23,6 @@ type UserController struct {
 func (u *UserController) Login() {
 	var loginMes models.LoginMes
 	json.Unmarshal(u.Ctx.Input.RequestBody, &loginMes)
-	fmt.Println(loginMes)
 	var userBox []models.Users
 	var destUser models.Users
 	result := models.Db.Where("name = ?", loginMes.Name).Find(&userBox)
@@ -100,19 +99,49 @@ func (u *UserController) Login() {
 	u.ServeJSON()
 }
 
-func (u *UserController) register() {
-	pass1 := until.HashAndSalt("123456")
-	user1 := &models.Users{
-		Name:     "admin2",
-		Avatar:   "",
-		Password: pass1,
-		Status:   models.SUPER_ADMIN,
-		Ctime:    time.Now().UnixNano(),
+func (u *UserController) Register() {
+	var Register models.Register
+	var Userc models.Users
+	json.Unmarshal(u.Ctx.Input.RequestBody, &Register)
+	// 昵称密码不能为空
+	if len(Register.Name) == 0 || len(Register.Password) == 0 {
+		errRes := models.SystemError{
+			Code:    models.NICK_NAME_ERROR_CODE,
+			Message: models.NICK_NAME_ERROR_MSG,
+		}
+		u.Data["json"] = errRes
+		u.ServeJSON()
+		return
 	}
-	fmt.Println(user1)
-	result := models.Db.Create(user1)
-	if result.Error != nil {
-		beego.Error("insert user%v to database failed,err:%v", result.Error)
+	// 用户判断
+	models.Db.Where("name = ?", Register.Name).First(&Userc)
+	if Userc.Id != 0 {
+		errRes := models.SystemError{
+			Code:    models.NICK_NAME_ERROR_CODE,
+			Message: models.NICK_NAME_ERROR_MSG,
+		}
+		u.Data["json"] = errRes
+		u.ServeJSON()
+		return
+	}
+	user := models.Users{
+		Name:     Register.Name,
+		Password: Register.Password,
+	}
+	// models.Db.Create(&Userc)
+	if err := models.Db.Create(&user).Error; err != nil {
+		u.Data["json"] = models.SuccessMsg{
+			Code:    0,
+			Message: "注册成功！",
+		}
+		u.ServeJSON()
+		return
+	} else {
+		u.Data["json"] = models.SuccessMsg{
+			Code:    0,
+			Message: "注册失败！",
+		}
+		u.ServeJSON()
 		return
 	}
 }
@@ -130,12 +159,12 @@ func (u *UserController) All() {
 			Code:    models.DB_ERROR_CODE,
 			Message: models.SYSTEM_ERROR_MSG,
 		}
-		errLogMsg := fmt.Sprintf("query all users err:", resultCount.Error)
+		errLogMsg := fmt.Sprintln("query all users err:", resultCount.Error)
 		beego.Error(errLogMsg)
 		u.Data["json"] = errRes
 		u.ServeJSON()
 	}
-	result :=  models.Db.Table("users").
+	result := models.Db.Table("users").
 		Scopes(models.Paginate(u.Ctx.Request)).
 		Scopes(models.FilterId(u.Ctx.Request)).
 		Scopes(models.FilterName(u.Ctx.Request)).
@@ -145,7 +174,7 @@ func (u *UserController) All() {
 			Code:    models.DB_ERROR_CODE,
 			Message: models.SYSTEM_ERROR_MSG,
 		}
-		errLogMsg := fmt.Sprintf("query all users err:", result.Error)
+		errLogMsg := fmt.Sprintln("query all users err:", result.Error)
 		beego.Error(errLogMsg)
 		u.Data["json"] = errRes
 		u.ServeJSON()

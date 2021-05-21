@@ -1,0 +1,10 @@
+2021/05/21 14:09:21.454 [C] [panic.go:965]  C:/Users/86151/go/src/personal_web_admin_end_go/filter/global.go:22
+2021/05/21 14:09:21.458 [C] [panic.go:965]  C:/Users/86151/go/pkg/mod/github.com/astaxie/beego@v1.12.1/router.go:644
+2021/05/21 14:09:21.465 [C] [panic.go:965]  C:/Users/86151/go/pkg/mod/github.com/astaxie/beego@v1.12.1/router.go:730
+2021/05/21 14:09:21.467 [C] [panic.go:965]  C:/Program Files/Go/src/net/http/server.go:2887
+2021/05/21 14:09:21.468 [C] [panic.go:965]  C:/Program Files/Go/src/net/http/server.go:1952
+2021/05/21 14:09:21.468 [C] [panic.go:965]  C:/Program Files/Go/src/runtime/asm_amd64.s:1371
+2021/05/21 14:09:21.470 [server.go:3137]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2021/05/21 14:09:58.003 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/21 14:10:12.244 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/21 14:10:15.271 [D] [global.go:18]  /register 

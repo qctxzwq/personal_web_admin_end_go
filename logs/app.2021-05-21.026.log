@@ -1,0 +1,10 @@
+2021/05/21 14:54:13.519 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/21 14:54:14.492 [D] [user.go:118]  0 
+2021/05/21 14:54:14.492 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    24.0013ms|   match|[46m POST    [0m /register   r:/register
+2021/05/21 14:54:23.697 [D] [user.go:118]  0 
+2021/05/21 14:54:23.697 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    24.5033ms|   match|[46m POST    [0m /register   r:/register
+2021/05/21 14:55:27.468 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/21 14:55:30.763 [D] [user.go:118]  0x126fba0 
+2021/05/21 14:55:30.764 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    25.1623ms|   match|[46m POST    [0m /register   r:/register
+2021/05/21 14:57:12.748 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/21 14:57:17.043 [D] [user.go:118]  &{0xc00015c6c0 record not found 0 0xc0000ce000 0} 

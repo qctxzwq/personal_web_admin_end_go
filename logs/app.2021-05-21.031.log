@@ -1,0 +1,10 @@
+2021/05/21 15:21:23.498 [D] [user.go:118]  0 
+2021/05/21 15:21:23.501 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    26.7715ms|   match|[46m POST    [0m /register   r:/register
+2021/05/21 15:22:01.400 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/21 15:22:04.263 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    24.2209ms|   match|[46m POST    [0m /register   r:/register
+2021/05/21 15:22:06.463 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    20.8383ms|   match|[46m POST    [0m /register   r:/register
+2021/05/21 15:22:20.920 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/21 15:22:23.526 [D] [user.go:121]  ~~~~~~~~~~~~~~ 
+2021/05/21 15:22:23.526 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    21.8409ms|   match|[46m POST    [0m /register   r:/register
+2021/05/21 15:23:07.015 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/21 15:23:09.879 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    23.3887ms|   match|[46m POST    [0m /register   r:/register

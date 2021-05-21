@@ -1,0 +1,10 @@
+2021/05/21 11:04:10.933 [C] [panic.go:965]  C:/Program Files/Go/src/net/http/server.go:2887
+2021/05/21 11:04:10.936 [C] [panic.go:965]  C:/Program Files/Go/src/net/http/server.go:1952
+2021/05/21 11:04:10.936 [C] [panic.go:965]  C:/Program Files/Go/src/runtime/asm_amd64.s:1371
+2021/05/21 11:04:10.937 [server.go:3137]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2021/05/21 11:04:15.605 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/21 11:04:21.854 [C] [panic.go:965]  the request url is  /Register
+2021/05/21 11:04:21.855 [C] [panic.go:965]  Handler crashed with error runtime error: slice bounds out of range [7:0]
+2021/05/21 11:04:21.856 [C] [panic.go:965]  C:/Program Files/Go/src/runtime/panic.go:965
+2021/05/21 11:04:21.859 [C] [panic.go:965]  C:/Program Files/Go/src/runtime/panic.go:116
+2021/05/21 11:04:21.860 [C] [panic.go:965]  C:/Users/86151/go/src/personal_web_admin_end_go/filter/global.go:21
