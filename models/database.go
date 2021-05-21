@@ -1,7 +1,6 @@
 package models
 
 import (
-	"github.com/astaxie/beego"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"net/http"
@@ -49,7 +48,6 @@ func Paginate(r *http.Request) func(db *gorm.DB) *gorm.DB {
 func FilterName(r *http.Request) func(db *gorm.DB) *gorm.DB {
 	return func(db *gorm.DB) *gorm.DB {
 		r.ParseForm()
-		beego.Debug("进来了进来了", r.Form["name"])
 		if len(r.Form["name"]) != 0 && len(r.Form["name"][0]) > 0 {
 			return db.Where("name LIKE ?", "%"+r.Form["name"][0]+"%")
 		}
@@ -61,9 +59,19 @@ func FilterName(r *http.Request) func(db *gorm.DB) *gorm.DB {
 func FilterId(r *http.Request) func(db *gorm.DB) *gorm.DB {
 	return func(db *gorm.DB) *gorm.DB {
 		r.ParseForm()
-		beego.Debug("进来了进来了", r.Form["id"])
 		if len(r.Form["id"]) != 0 && len(r.Form["id"][0]) > 0 {
 			return db.Where("id LIKE ?", "%"+r.Form["id"][0]+"%")
+		}
+		return db
+	}
+}
+
+// 用户状态
+func FilterStatus(r *http.Request) func(db *gorm.DB) *gorm.DB {
+	return func(db *gorm.DB) *gorm.DB {
+		r.ParseForm()
+		if len(r.Form["status"]) != 0 && len(r.Form["status"][0]) >= 0 {
+			return db.Where("status = ?", r.Form["status"][0])
 		}
 		return db
 	}

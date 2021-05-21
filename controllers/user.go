@@ -107,7 +107,7 @@ func (u *UserController) register() {
 		Avatar:   "",
 		Password: pass1,
 		Status:   models.SUPER_ADMIN,
-		Ctime:    time.Now().UnixNano(),
+		Ctime:    time.Now().Unix() * 1000,
 	}
 	fmt.Println(user1)
 	result := models.Db.Create(user1)
@@ -124,6 +124,7 @@ func (u *UserController) All() {
 	resultCount := models.Db.Table("users").
 		Scopes(models.FilterName(u.Ctx.Request)).
 		Scopes(models.FilterId(u.Ctx.Request)).
+		Scopes(models.FilterStatus(u.Ctx.Request)).
 		Find(&usersAll)
 	if resultCount.Error != nil {
 		errRes := models.SystemError{
@@ -135,10 +136,11 @@ func (u *UserController) All() {
 		u.Data["json"] = errRes
 		u.ServeJSON()
 	}
-	result :=  models.Db.Table("users").
+	result := models.Db.Table("users").
 		Scopes(models.Paginate(u.Ctx.Request)).
 		Scopes(models.FilterId(u.Ctx.Request)).
 		Scopes(models.FilterName(u.Ctx.Request)).
+		Scopes(models.FilterStatus(u.Ctx.Request)).
 		Find(&users)
 	if result.Error != nil {
 		errRes := models.SystemError{

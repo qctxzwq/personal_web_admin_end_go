@@ -1,0 +1,10 @@
+2021/05/21 10:22:36.447 [D] [database.go:64]  进来了进来了 [] 
+2021/05/21 10:22:36.447 [D] [database.go:52]  进来了进来了 [] 
+2021/05/21 10:22:36.460 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|7m43.617278962s|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/21 10:39:03.545 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/21 10:39:09.560 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
+2021/05/21 10:39:09.560 [D] [database.go:52]  进来了进来了 [] 
+2021/05/21 10:39:09.561 [D] [database.go:64]  进来了进来了 [] 
+2021/05/21 10:39:09.567 [D] [database.go:64]  进来了进来了 [] 
+2021/05/21 10:39:09.567 [D] [database.go:52]  进来了进来了 [] 
+2021/05/21 10:39:09.574 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|   13.73657ms|   match|[97;44m GET     [0m /user/all   r:/user/all

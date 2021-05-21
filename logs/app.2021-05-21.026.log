@@ -1,0 +1,10 @@
+2021/05/21 15:47:14.053 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  14.242473ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/21 15:47:15.725 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
+2021/05/21 15:47:15.740 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  14.676087ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/21 15:47:43.147 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
+2021/05/21 15:47:43.161 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  13.912829ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/21 15:48:27.452 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
+2021/05/21 15:48:27.465 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  13.134605ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/21 15:50:28.127 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/21 15:51:20.812 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
+2021/05/21 15:51:20.826 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  14.782225ms|   match|[97;44m GET     [0m /user/all   r:/user/all
