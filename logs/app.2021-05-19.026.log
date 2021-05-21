@@ -1,0 +1,10 @@
+2021/05/19 17:26:15.015 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE4NDk0MjUsImlkIjoyLCJuYW1lIjoiYWRtaW4yIiwic3RhdHVzIjoxfQ.l82teBPp3fQ84FvIsjvuRQxV3oAoKbl_-olt7WCM0W0 
+2021/05/19 17:26:15.026 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  10.989338ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 17:26:30.517 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE4NDk0MjUsImlkIjoyLCJuYW1lIjoiYWRtaW4yIiwic3RhdHVzIjoxfQ.l82teBPp3fQ84FvIsjvuRQxV3oAoKbl_-olt7WCM0W0 
+2021/05/19 17:26:30.528 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  11.135078ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 17:29:31.482 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE4NDk0MjUsImlkIjoyLCJuYW1lIjoiYWRtaW4yIiwic3RhdHVzIjoxfQ.l82teBPp3fQ84FvIsjvuRQxV3oAoKbl_-olt7WCM0W0 
+2021/05/19 17:29:31.498 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  16.261058ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 17:29:35.475 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE4NDk0MjUsImlkIjoyLCJuYW1lIjoiYWRtaW4yIiwic3RhdHVzIjoxfQ.l82teBPp3fQ84FvIsjvuRQxV3oAoKbl_-olt7WCM0W0 
+2021/05/19 17:29:35.498 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  22.404123ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 17:30:00.068 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE4NDk0MjUsImlkIjoyLCJuYW1lIjoiYWRtaW4yIiwic3RhdHVzIjoxfQ.l82teBPp3fQ84FvIsjvuRQxV3oAoKbl_-olt7WCM0W0 
+2021/05/19 17:30:00.078 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|   9.927302ms|   match|[97;44m GET     [0m /user/all   r:/user/all

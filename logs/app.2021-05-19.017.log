@@ -1,0 +1,10 @@
+2021/05/19 16:16:41.571 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/19 16:16:44.999 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 16:16:45.015 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  16.130912ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 16:17:06.157 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 16:17:06.239 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  82.372733ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 16:18:43.689 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/19 16:18:45.467 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 16:18:45.468 [D] [database.go:42]  1 100 
+2021/05/19 16:18:45.478 [D] [database.go:42]  1 100 
+2021/05/19 16:18:45.484 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  17.523546ms|   match|[97;44m GET     [0m /user/all   r:/user/all

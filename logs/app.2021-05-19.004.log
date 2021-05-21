@@ -1,0 +1,10 @@
+2021/05/19 15:35:00.240 [D] [global.go:21]  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 15:35:00.243 [E] [global.go:35]  parse token failed,err:%v this is not a token 
+2021/05/19 15:35:00.253 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  12.954434ms| nomatch|[97;44m GET     [0m /user/all
+2021/05/19 15:38:47.030 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/19 15:39:04.512 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 15:39:04.512 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    672.309µs| nomatch|[97;44m GET     [0m /user/all
+2021/05/19 15:39:39.122 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/19 15:39:52.496 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 15:39:52.505 [E] [user.go:132]  query all users err:%!(EXTRA *mysql.MySQLError=Error 1146: Table 'web_qctx.u_ser_no_pwds' doesn't exist) 
+2021/05/19 15:39:52.511 [E] [user.go:143]  query all users err:%!(EXTRA *mysql.MySQLError=Error 1146: Table 'web_qctx.u_ser_no_pwds' doesn't exist) 

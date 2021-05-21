@@ -1,0 +1,10 @@
+2021/05/19 18:13:06.685 [D] [database.go:52]  进来了进来了 [] 
+2021/05/19 18:13:06.692 [D] [database.go:52]  进来了进来了 [] 
+2021/05/19 18:13:06.700 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  15.039262ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 18:13:44.331 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/19 18:13:49.406 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE4NDk0MjUsImlkIjoyLCJuYW1lIjoiYWRtaW4yIiwic3RhdHVzIjoxfQ.l82teBPp3fQ84FvIsjvuRQxV3oAoKbl_-olt7WCM0W0 
+2021/05/19 18:13:49.411 [D] [database.go:52]  进来了进来了 [] 
+2021/05/19 18:13:49.430 [D] [database.go:52]  进来了进来了 [] 
+2021/05/19 18:13:49.439 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  33.402276ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 18:13:53.226 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE4NDk0MjUsImlkIjoyLCJuYW1lIjoiYWRtaW4yIiwic3RhdHVzIjoxfQ.l82teBPp3fQ84FvIsjvuRQxV3oAoKbl_-olt7WCM0W0 
+2021/05/19 18:13:53.226 [D] [database.go:52]  进来了进来了 [123] 

@@ -1,0 +1,10 @@
+2021/05/19 16:07:29.007 [server.go:3093]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2021/05/19 16:08:12.329 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/19 16:08:15.208 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 16:08:15.222 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  13.198655ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 16:08:23.444 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/19 16:08:25.284 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 16:08:25.307 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  23.007602ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 16:08:42.116 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/19 16:08:43.256 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 16:08:43.271 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  15.239095ms|   match|[97;44m GET     [0m /user/all   r:/user/all

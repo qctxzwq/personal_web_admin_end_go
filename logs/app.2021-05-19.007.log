@@ -1,0 +1,10 @@
+2021/05/19 16:03:41.420 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/19 16:03:44.447 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 16:03:44.447 [C] [panic.go:969]  the request url is  /user/all
+2021/05/19 16:03:44.447 [C] [panic.go:969]  Handler crashed with error runtime error: index out of range [0] with length 0
+2021/05/19 16:03:44.447 [C] [panic.go:969]  /usr/local/go/src/runtime/panic.go:969
+2021/05/19 16:03:44.447 [C] [panic.go:969]  /usr/local/go/src/runtime/panic.go:88
+2021/05/19 16:03:44.447 [C] [panic.go:969]  /home/qctx/Documents/Go/src/qctx.work/website/admin/models/database.go:20
+2021/05/19 16:03:44.447 [C] [panic.go:969]  /home/qctx/Documents/Go/pkg/mod/gorm.io/gorm@v1.21.9/callbacks.go:81
+2021/05/19 16:03:44.447 [C] [panic.go:969]  /home/qctx/Documents/Go/pkg/mod/gorm.io/gorm@v1.21.9/finisher_api.go:171
+2021/05/19 16:03:44.447 [C] [panic.go:969]  /home/qctx/Documents/Go/src/qctx.work/website/admin/controllers/user.go:125

@@ -1,0 +1,10 @@
+2021/05/19 16:19:26.505 [C] [panic.go:969]  /usr/local/go/src/reflect/value.go:475
+2021/05/19 16:19:26.505 [C] [panic.go:969]  /usr/local/go/src/reflect/value.go:336
+2021/05/19 16:19:26.505 [C] [panic.go:969]  /home/qctx/Documents/Go/pkg/mod/github.com/astaxie/beego@v1.12.1/router.go:853
+2021/05/19 16:19:26.505 [C] [panic.go:969]  /usr/local/go/src/net/http/server.go:2843
+2021/05/19 16:19:26.505 [C] [panic.go:969]  /usr/local/go/src/net/http/server.go:1925
+2021/05/19 16:19:26.505 [C] [panic.go:969]  /usr/local/go/src/runtime/asm_amd64.s:1374
+2021/05/19 16:19:26.507 [server.go:3093]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2021/05/19 16:22:20.529 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/19 16:22:23.728 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 16:22:23.728 [D] [database.go:42]  [] [] 1 100 

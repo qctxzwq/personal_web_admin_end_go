@@ -18,9 +18,10 @@ func GlobalFilter(ctx *context.Context) {
 	if ctx.Input.URL() != "/login" {
 		//判断是否携带AUTHORIZATION字段
 		token := ctx.Input.Header("AUTHORIZATION")
+		token = token[7:]
 		beego.Debug(token)
 		// 未携带token
-		if token == "null" {
+		if len(token) == 0 || token == "null" {
 			ctx.Output.SetStatus(401)
 			data := models.SystemError{
 				Code:    models.UNLOGIN_ERROR_CODE,

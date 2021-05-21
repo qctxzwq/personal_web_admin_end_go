@@ -1,0 +1,10 @@
+2021/05/19 16:33:30.285 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 16:33:30.287 [D] [database.go:22]  map[page:[1] psize:[10]] 
+2021/05/19 16:33:30.287 [D] [database.go:44]  map[page:[1] psize:[10]] [1] [10] 10 10 
+2021/05/19 16:33:30.297 [D] [database.go:22]  map[page:[1] psize:[10]] 
+2021/05/19 16:33:30.297 [D] [database.go:44]  map[page:[1] psize:[10]] [1] [10] 10 10 
+2021/05/19 16:33:30.309 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  23.982562ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 16:34:36.445 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/19 16:34:37.944 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 
+2021/05/19 16:34:37.958 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  14.819985ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 16:34:44.031 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIwMTQ0NDQsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.P5CvPSrdoS6iYqF9rOCOQ40w8zCou0eZsy9ZajoTtSg 

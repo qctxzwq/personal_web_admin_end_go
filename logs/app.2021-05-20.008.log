@@ -1,0 +1,10 @@
+2021/05/20 16:42:40.436 [D] [database.go:52]  进来了进来了 [] 
+2021/05/20 16:42:40.442 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  13.541493ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/20 16:43:29.932 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDQ1MTMsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.Kn8CH8V8VRrMaBVXJHxAdvxddyEDrK7WzXO9U2DhQ50 
+2021/05/20 16:43:29.933 [D] [database.go:52]  进来了进来了 [] 
+2021/05/20 16:43:29.933 [D] [database.go:64]  进来了进来了 [] 
+2021/05/20 16:43:29.945 [D] [database.go:64]  进来了进来了 [] 
+2021/05/20 16:43:29.946 [D] [database.go:52]  进来了进来了 [] 
+2021/05/20 16:43:29.951 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  18.468193ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/20 16:43:43.328 [D] [global.go:22]  null 
+2021/05/20 16:43:43.328 [E] [global.go:36]  parse token failed,err:%v this is not a token 

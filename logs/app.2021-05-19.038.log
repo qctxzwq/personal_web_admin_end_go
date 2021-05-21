@@ -1,0 +1,10 @@
+2021/05/19 18:15:00.376 [D] [database.go:52]  进来了进来了 [admin2] 
+2021/05/19 18:15:00.376 [D] [database.go:54]  根据name: admin2 
+2021/05/19 18:15:00.392 [D] [database.go:52]  进来了进来了 [admin2] 
+2021/05/19 18:15:00.393 [D] [database.go:54]  根据name: admin2 
+2021/05/19 18:15:00.413 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  37.107095ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 18:20:40.047 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE4NDk0MjUsImlkIjoyLCJuYW1lIjoiYWRtaW4yIiwic3RhdHVzIjoxfQ.l82teBPp3fQ84FvIsjvuRQxV3oAoKbl_-olt7WCM0W0 
+2021/05/19 18:20:40.047 [D] [database.go:52]  进来了进来了 [] 
+2021/05/19 18:20:40.054 [D] [database.go:52]  进来了进来了 [] 
+2021/05/19 18:20:40.062 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  14.844488ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/19 18:20:50.202 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE4NDk0MjUsImlkIjoyLCJuYW1lIjoiYWRtaW4yIiwic3RhdHVzIjoxfQ.l82teBPp3fQ84FvIsjvuRQxV3oAoKbl_-olt7WCM0W0 

@@ -1,0 +1,10 @@
+2021/05/20 16:43:43.329 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    284.315µs| nomatch|[97;44m GET     [0m /user/all
+2021/05/20 16:43:50.730 [D] [global.go:22]  null 
+2021/05/20 16:43:50.751 [E] [global.go:36]  parse token failed,err:%v this is not a token 
+2021/05/20 16:43:50.751 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  21.342809ms| nomatch|[97;44m GET     [0m /user/all
+2021/05/20 16:43:55.640 [D] [global.go:22]  null 
+2021/05/20 16:43:55.640 [E] [global.go:36]  parse token failed,err:%v this is not a token 
+2021/05/20 16:43:55.640 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    217.147µs| nomatch|[97;44m GET     [0m /user/all
+2021/05/20 16:45:03.082 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/20 16:45:08.043 [D] [global.go:22]  null 
+2021/05/20 16:45:08.044 [D] [server.go:2843]  | 192.168.31.177|[97;43m 401 [0m|    912.128µs| nomatch|[97;44m GET     [0m /user/all

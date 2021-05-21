@@ -23,7 +23,7 @@ type UserController struct {
 func (u *UserController) Login() {
 	var loginMes models.LoginMes
 	json.Unmarshal(u.Ctx.Input.RequestBody, &loginMes)
-
+	fmt.Println(loginMes)
 	var userBox []models.Users
 	var destUser models.Users
 	result := models.Db.Where("name = ?", loginMes.Name).Find(&userBox)
@@ -80,35 +80,34 @@ func (u *UserController) Login() {
 		return
 	}
 	// 组合数据
-	info :=  make(map[string]interface{})
-	info["id"] = destUser.Id
-	info["name"] = destUser.Name
-	info["status"] = destUser.Status
-	info["avatar"] = destUser.Avatar
-	info["ctime"] = destUser.Ctime
+	info := &models.UserNoPwd{
+		Id:     destUser.Id,
+		Name:   destUser.Name,
+		Avatar: destUser.Avatar,
+		Status: destUser.Status,
+		Ctime:  destUser.Ctime,
+	}
 	userInfo := models.UserInfo{
 		UserInfo: info,
 		Token:    token,
 	}
-	mes := &models.LoginSuccess{
+	mes := &models.SuccessMsg{
 		Code:    0,
 		Data:    userInfo,
 		Message: "登录成功!",
 	}
 	u.Data["json"] = mes
-
 	u.ServeJSON()
 }
 
 func (u *UserController) register() {
-	models.Db.AutoMigrate(&models.Users{})
 	pass1 := until.HashAndSalt("123456")
 	user1 := &models.Users{
 		Name:     "admin2",
 		Avatar:   "",
 		Password: pass1,
 		Status:   models.SUPER_ADMIN,
-		Ctime:    time.Now().Unix(),
+		Ctime:    time.Now().UnixNano(),
 	}
 	fmt.Println(user1)
 	result := models.Db.Create(user1)
@@ -116,4 +115,48 @@ func (u *UserController) register() {
 		beego.Error("insert user%v to database failed,err:%v", result.Error)
 		return
 	}
+}
+
+// 获取全部用户
+func (u *UserController) All() {
+	var users []models.UserNoPwd
+	var usersAll []models.UserNoPwd
+	resultCount := models.Db.Table("users").
+		Scopes(models.FilterName(u.Ctx.Request)).
+		Scopes(models.FilterId(u.Ctx.Request)).
+		Find(&usersAll)
+	if resultCount.Error != nil {
+		errRes := models.SystemError{
+			Code:    models.DB_ERROR_CODE,
+			Message: models.SYSTEM_ERROR_MSG,
+		}
+		errLogMsg := fmt.Sprintf("query all users err:", resultCount.Error)
+		beego.Error(errLogMsg)
+		u.Data["json"] = errRes
+		u.ServeJSON()
+	}
+	result :=  models.Db.Table("users").
+		Scopes(models.Paginate(u.Ctx.Request)).
+		Scopes(models.FilterId(u.Ctx.Request)).
+		Scopes(models.FilterName(u.Ctx.Request)).
+		Find(&users)
+	if result.Error != nil {
+		errRes := models.SystemError{
+			Code:    models.DB_ERROR_CODE,
+			Message: models.SYSTEM_ERROR_MSG,
+		}
+		errLogMsg := fmt.Sprintf("query all users err:", result.Error)
+		beego.Error(errLogMsg)
+		u.Data["json"] = errRes
+		u.ServeJSON()
+	}
+	u.Data["json"] = models.SuccessMsg{
+		Code: 0,
+		Data: models.List{
+			Total:    int(resultCount.RowsAffected),
+			UserList: users,
+		},
+		Message: "获取用户列表成功！",
+	}
+	u.ServeJSON()
 }

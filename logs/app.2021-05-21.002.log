@@ -1,0 +1,10 @@
+2021/05/21 10:14:52.851 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
+2021/05/21 10:14:52.896 [D] [database.go:52]  进来了进来了 [] 
+2021/05/21 10:14:52.897 [D] [database.go:64]  进来了进来了 [] 
+2021/05/21 10:15:06.666 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
+2021/05/21 10:15:06.666 [D] [database.go:52]  进来了进来了 [] 
+2021/05/21 10:15:06.667 [D] [database.go:64]  进来了进来了 [] 
+2021/05/21 10:15:06.712 [D] [database.go:64]  进来了进来了 [] 
+2021/05/21 10:15:06.713 [D] [database.go:52]  进来了进来了 [] 
+2021/05/21 10:15:06.721 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  54.619455ms|   match|[97;44m GET     [0m /user/all   r:/user/all
+2021/05/21 10:22:36.445 [E] [user.go:134]  query all users err:%!(EXTRA *errors.errorString=invalid connection) 

@@ -1,9 +1,3 @@
-2021/05/17 17:42:04.108 [E] [global.go:35]  parse token failed,err:%v this is not a token 
-2021/05/17 17:42:04.110 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|   3.059273ms| nomatch|[97;46m POST    [0m /login
-2021/05/17 17:42:45.379 [I] [asm_amd64.s:1374]  http server Running on http://:8080
-2021/05/17 17:43:09.334 [D] [global.go:21]  null 
-2021/05/17 17:43:09.335 [D] [server.go:2843]  | 192.168.31.177|[97;43m 401 [0m|    542.354µs| nomatch|[97;46m POST    [0m /login
-2021/05/17 17:43:35.289 [I] [asm_amd64.s:1374]  http server Running on http://:8080
-2021/05/17 17:43:39.693 [I] [user.go:49]  user not exist {false admin1 123456 } 
-2021/05/17 17:43:39.693 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  14.553167ms|   match|[97;46m POST    [0m /login   r:/login
-2021/05/17 17:43:45.760 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  16.549042ms|   match|[97;46m POST    [0m /login   r:/login
+2021/05/21 10:22:36.447 [D] [database.go:64]  进来了进来了 [] 
+2021/05/21 10:22:36.447 [D] [database.go:52]  进来了进来了 [] 
+2021/05/21 10:22:36.460 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|7m43.617278962s|   match|[97;44m GET     [0m /user/all   r:/user/all

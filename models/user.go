@@ -34,22 +34,36 @@ type Users struct {
 	Ctime    int64      `json:"ctime"`
 }
 
-// 登录成功的用户信息
-type UserInfo struct {
-	UserInfo map[string]interface{} `json:"user_info"`
-	Token    string                 `json:"token"`
+// 无密码的用户信息
+type UserNoPwd struct {
+	Id     int        `json:"id";gorm:"primaryKey"`
+	Name   string     `json:"name"`
+	Avatar string     `json:"avatar"`
+	Status userStatus `json:"status"`
+	Ctime  int64      `json:"ctime"`
 }
 
-// 登录成功
-type LoginSuccess struct {
+// 登录成功的用户信息
+type UserInfo struct {
+	UserInfo *UserNoPwd `json:"user_info"`
+	Token    string     `json:"token"`
+}
+
+// 获取的全部用户结构体
+type List struct {
+	Total int `json:"total"`
+	UserList []UserNoPwd `json:"user_info"`
+}
+
+// 接口请求成功
+type SuccessMsg struct {
 	Code    int      `json:"code"`
-	Data    UserInfo `json:"data"`
+	Data    interface{} `json:"data"`
 	Message string   `json:"message"`
 }
 
-// 登陆失败
-type LoginFailed struct {
+// 接口请求失败
+type FailedMsg struct {
 	Code    int
 	Message string
 }
-
