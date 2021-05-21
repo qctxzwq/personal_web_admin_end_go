@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2021/05/21 11:33:04.294 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
 2021/05/21 11:33:04.311 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  16.988012ms|   match|[97;44m GET     [0m /user/all   r:/user/all
 2021/05/21 11:34:49.374 [I] [asm_amd64.s:1374]  http server Running on http://:8080
@@ -8,3 +9,15 @@
 2021/05/21 11:42:24.934 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
 2021/05/21 11:42:24.947 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  12.592099ms|   match|[97;44m GET     [0m /user/all   r:/user/all
 2021/05/21 13:59:47.806 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
+=======
+2021/05/21 14:16:56.513 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|       1.38ms|   match|[46m POST    [0m /register   r:/register
+2021/05/21 14:17:25.192 [D] [global.go:18]  /register 
+2021/05/21 14:17:25.192 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|      674.4µs|   match|[46m POST    [0m /register   r:/register
+2021/05/21 14:17:29.492 [D] [global.go:18]  /register 
+2021/05/21 14:17:29.493 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|      781.9µs|   match|[46m POST    [0m /register   r:/register
+2021/05/21 14:17:39.141 [D] [global.go:18]  /register 
+2021/05/21 14:17:39.143 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|     1.0083ms|   match|[46m POST    [0m /register   r:/register
+2021/05/21 14:18:26.219 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/21 14:18:33.633 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|      527.9µs|   match|[46m POST    [0m /register   r:/register
+2021/05/21 14:18:40.880 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|      181.9µs|   match|[46m POST    [0m /register   r:/register
+>>>>>>> 7f4001ee42fff73773975c2a62ae1c774d9676fc

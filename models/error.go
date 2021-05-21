@@ -10,6 +10,7 @@ const (
 	USER_ERROR_CODE          errorCode = 501
 	PASSWORD_ERROR_CODE      errorCode = 502
 	TOKEN_CREATE_ERROR_CODE  errorCode = 503
+	NICK_NAME_ERROR_CODE     errorCode = 504
 )
 
 const (
@@ -18,6 +19,7 @@ const (
 	SYSTEM_ERROR_MSG        errorMessage = "系统错误，请稍后重试！"
 	USER_ERROR_MSG          errorMessage = "用户不存在！"
 	PASSWORD_ERROR_MSG      errorMessage = "密码错误！"
+	NICK_NAME_ERROR_MSG     errorMessage = "昵称或者密码为空"
 )
 
 type SystemError struct {

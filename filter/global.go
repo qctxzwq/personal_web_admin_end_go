@@ -3,6 +3,7 @@ package filter
 import (
 	"admin/models"
 	"admin/until"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/context"
 )
@@ -14,8 +15,7 @@ func GlobalFilter(ctx *context.Context) {
 	ctx.ResponseWriter.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Authorization, Accept, X-Requested-With")
 	ctx.ResponseWriter.Header().Set("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
 	ctx.ResponseWriter.Header().Set("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
-
-	if ctx.Input.URL() != "/login" {
+	if !(ctx.Input.URL() == "/login" || ctx.Input.URL() == "/register") {
 		//判断是否携带AUTHORIZATION字段
 		token := ctx.Input.Header("AUTHORIZATION")
 		token = token[7:]

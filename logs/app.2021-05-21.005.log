@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2021/05/21 10:40:59.269 [D] [database.go:52]  进来了进来了 [] 
 2021/05/21 10:40:59.277 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  16.923526ms|   match|[97;44m GET     [0m /user/all   r:/user/all
 2021/05/21 10:42:38.571 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
@@ -8,3 +9,15 @@
 2021/05/21 10:42:38.586 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|  14.872258ms|   match|[97;44m GET     [0m /user/all   r:/user/all
 2021/05/21 10:56:32.447 [D] [global.go:22]  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjIxMDYzNDgsImlkIjoxLCJuYW1lIjoiYWRtaW4iLCJzdGF0dXMiOjB9.CSLyXXE8HP_PcsWXtRg32WJIIlwTQ6R6xuQL-xQGCmQ 
 2021/05/21 10:56:32.447 [D] [database.go:52]  进来了进来了 [] 
+=======
+2021/05/21 11:03:02.802 [I] [asm_amd64.s:1371]  http server Running on http://:8080
+2021/05/21 11:03:06.929 [C] [panic.go:965]  the request url is  /Register
+2021/05/21 11:03:06.931 [C] [panic.go:965]  Handler crashed with error runtime error: slice bounds out of range [7:0]
+2021/05/21 11:03:06.931 [C] [panic.go:965]  C:/Program Files/Go/src/runtime/panic.go:965
+2021/05/21 11:03:06.931 [C] [panic.go:965]  C:/Program Files/Go/src/runtime/panic.go:116
+2021/05/21 11:03:06.932 [C] [panic.go:965]  C:/Users/86151/go/src/personal_web_admin_end_go/filter/global.go:21
+2021/05/21 11:03:06.932 [C] [panic.go:965]  C:/Users/86151/go/pkg/mod/github.com/astaxie/beego@v1.12.1/router.go:644
+2021/05/21 11:03:06.932 [C] [panic.go:965]  C:/Users/86151/go/pkg/mod/github.com/astaxie/beego@v1.12.1/router.go:730
+2021/05/21 11:03:06.935 [C] [panic.go:965]  C:/Program Files/Go/src/net/http/server.go:2887
+2021/05/21 11:03:06.935 [C] [panic.go:965]  C:/Program Files/Go/src/net/http/server.go:1952
+>>>>>>> 7f4001ee42fff73773975c2a62ae1c774d9676fc

@@ -24,6 +24,12 @@ type LoginMes struct {
 	LoginType string `json:"type"`
 }
 
+// 注册必传字段
+type Register struct {
+	Name     string `json:"name"`
+	Password string `json:"password"`
+}
+
 // 用户基本信息
 type Users struct {
 	Id       int        `json:"id";gorm:"primaryKey"`
@@ -51,15 +57,15 @@ type UserInfo struct {
 
 // 获取的全部用户结构体
 type List struct {
-	Total int `json:"total"`
+	Total    int         `json:"total"`
 	UserList []UserNoPwd `json:"user_info"`
 }
 
 // 接口请求成功
 type SuccessMsg struct {
-	Code    int      `json:"code"`
+	Code    int         `json:"code"`
 	Data    interface{} `json:"data"`
-	Message string   `json:"message"`
+	Message string      `json:"message"`
 }
 
 // 接口请求失败
