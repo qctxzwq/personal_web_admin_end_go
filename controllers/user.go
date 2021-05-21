@@ -134,16 +134,16 @@ func (u *UserController) Register() {
 			Code:    0,
 			Message: "注册成功！",
 		}
-		u.ServeJSON()
-		return
+
 	} else {
 		u.Data["json"] = models.SuccessMsg{
-			Code:    0,
+			Code:    500,
 			Message: "注册失败！",
 		}
-		u.ServeJSON()
-		return
+
 	}
+	u.ServeJSON()
+	return
 }
 
 // 获取全部用户
