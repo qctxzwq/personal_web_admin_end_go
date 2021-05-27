@@ -15,6 +15,11 @@ func init() {
 		return
 	}
 	models.InitRouteAuth()
+	err = models.InitConfig()
+	if err != nil {
+		beego.Error("initial config file failed:", err)
+		return
+	}
 }
 
 func main() {

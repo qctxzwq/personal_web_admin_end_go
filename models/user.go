@@ -1,15 +1,15 @@
 package models
 
-type userStatus int
+type UserStatus int
 
 const (
-	SUPER_ADMIN       userStatus = 0
-	NORMAL_ADMIN      userStatus = 1
-	SUPER_USER        userStatus = 2
-	NORMAL_USER       userStatus = 3
-	FORBIDEN_USER_ONE userStatus = 4
-	FORBIDEN_USER_TWO userStatus = 5
-	VISITOR           userStatus = 6
+	SUPER_ADMIN       UserStatus = 0
+	NORMAL_ADMIN      UserStatus = 1
+	SUPER_USER        UserStatus = 2
+	NORMAL_USER       UserStatus = 3
+	FORBIDEN_USER_ONE UserStatus = 4
+	FORBIDEN_USER_TWO UserStatus = 5
+	VISITOR           UserStatus = 6
 )
 
 var (
@@ -26,8 +26,11 @@ type LoginMes struct {
 
 // 注册必传字段
 type Register struct {
-	Name     string `json:"name"`
-	Password string `json:"password"`
+	Name     string `json:"name";form:"name"`
+	Password string `json:"password";form:"password"`
+	Confirm string `json:"confirm";form:"confirm"`
+	Status UserStatus `json:"status";form:"status"`
+	Avatar string `json:"avatar"`
 }
 
 // 用户基本信息
@@ -36,7 +39,7 @@ type Users struct {
 	Name     string     `json:"name"`
 	Avatar   string     `json:"avatar"`
 	Password string     `json:"password"`
-	Status   userStatus `json:"status"`
+	Status   UserStatus `json:"status"`
 	Ctime    int64      `json:"ctime"`
 }
 
@@ -45,7 +48,7 @@ type UserNoPwd struct {
 	Id     int        `json:"id";gorm:"primaryKey"`
 	Name   string     `json:"name"`
 	Avatar string     `json:"avatar"`
-	Status userStatus `json:"status"`
+	Status UserStatus `json:"status"`
 	Ctime  int64      `json:"ctime"`
 }
 

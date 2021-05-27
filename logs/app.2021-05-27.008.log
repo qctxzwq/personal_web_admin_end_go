@@ -1,0 +1,10 @@
+2021/05/27 16:58:43.321 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    835.604µs|   match|[97;46m POST    [0m /register   r:/register
+2021/05/27 17:01:49.716 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/27 17:01:51.810 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    241.515µs|   match|[97;46m POST    [0m /register   r:/register
+2021/05/27 17:05:05.698 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/27 17:05:07.313 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    519.915µs|   match|[97;46m POST    [0m /register   r:/register
+2021/05/27 17:06:08.220 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/27 17:06:10.555 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    275.892µs|   match|[97;46m POST    [0m /register   r:/register
+2021/05/27 17:07:04.020 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/27 17:07:15.842 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    277.794µs|   match|[97;46m POST    [0m /register   r:/register
+2021/05/27 17:36:18.615 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    434.437µs|   match|[97;46m POST    [0m /register   r:/register

@@ -5,6 +5,7 @@ import (
 	"admin/until"
 	"encoding/json"
 	"fmt"
+	"time"
 
 	"github.com/astaxie/beego"
 )
@@ -100,48 +101,90 @@ func (u *UserController) Login() {
 }
 
 func (u *UserController) Register() {
-	var Register models.Register
-	var Userc models.Users
-	json.Unmarshal(u.Ctx.Input.RequestBody, &Register)
-	// 昵称密码不能为空
-	if len(Register.Name) == 0 || len(Register.Password) == 0 {
+	name := u.GetString("name")
+	password := u.GetString("password")
+	confirm := u.GetString("confirm")
+	status, err := u.GetInt("status")
+	if err != nil {
+		beego.Error("get status err:", err)
 		errRes := models.SystemError{
-			Code:    models.NICK_NAME_ERROR_CODE,
-			Message: models.NICK_NAME_ERROR_MSG,
-		}
-		u.Data["json"] = errRes
-		u.ServeJSON()
-		return
-
-	}
-	// 用户判断
-	models.Db.Where("name = ?", Register.Name).First(&Userc)
-	if Userc.Id != 0 {
-		errRes := models.SystemError{
-			Code:    models.NICK_NAME_ERROR_CODE,
-			Message: models.NICK_NAME_ERROR_MSG,
+			Code:    models.GET_REGIIST_USERSTATUS_ERROR_CODE_,
+			Message: models.SYSTEM_ERROR_MSG,
 		}
 		u.Data["json"] = errRes
 		u.ServeJSON()
 		return
 	}
-	user := models.Users{
-		Name:     Register.Name,
-		Password: Register.Password,
-	}
-	// models.Db.Create(&Userc)
-	if err := models.Db.Create(&user).Error; err != nil {
-		u.Data["json"] = models.SuccessMsg{
-			Code:    0,
-			Message: "注册成功！",
+	f, h, err := u.GetFile("avatar")
+	if err != nil {
+		beego.Error("get avatar file err:", err)
+		errRes := models.SystemError{
+			Code:    models.GET_REGIIST_AVATARFILE_ERROR_CODE_,
+			Message: models.SYSTEM_ERROR_MSG,
 		}
+		u.Data["json"] = errRes
+		u.ServeJSON()
+		return
+	}
+	defer f.Close()
+	uploadPath := models.ProCfg.String("uploadpath")
+	folderName := time.Now().Format("2006-01-02")
+	path := uploadPath + folderName + h.Filename
+	u.SaveToFile("avatar", path)
+	user := models.Register{
+		Name:     name,
+		Password: password,
+		Confirm:  confirm,
+		Status:   models.UserStatus(status),
+	}
 
-	} else {
-		u.Data["json"] = models.SuccessMsg{
-			Code:    500,
-			Message: "注册失败！",
-		}
+	//json.Unmarshal(u.Ctx.Input.RequestBody, &user)
+	u.Data["json"] = models.SuccessMsg{
+		Code:    0,
+		Data:    user,
+		Message: "注册成功！",
 	}
+	//var Userc models.Users
+	//json.Unmarshal(u.Ctx.Input.RequestBody, &Register)
+	//// 昵称密码不能为空
+	//if len(Register.Name) == 0 || len(Register.Password) == 0 {
+	//	errRes := models.SystemError{
+	//		Code:    models.NICK_NAME_ERROR_CODE,
+	//		Message: models.NICK_NAME_ERROR_MSG,
+	//	}
+	//	u.Data["json"] = errRes
+	//	u.ServeJSON()
+	//	return
+	//
+	//}
+	//// 用户判断
+	//models.Db.Where("name = ?", Register.Name).First(&Userc)
+	//if Userc.Id != 0 {
+	//	errRes := models.SystemError{
+	//		Code:    models.NICK_NAME_ERROR_CODE,
+	//		Message: models.NICK_NAME_ERROR_MSG,
+	//	}
+	//	u.Data["json"] = errRes
+	//	u.ServeJSON()
+	//	return
+	//}
+	//user := models.Users{
+	//	Name:     Register.Name,
+	//	Password: Register.Password,
+	//}
+	//// models.Db.Create(&Userc)
+	//if err := models.Db.Create(&user).Error; err != nil {
+	//	u.Data["json"] = models.SuccessMsg{
+	//		Code:    0,
+	//		Message: "注册成功！",
+	//	}
+	//
+	//} else {
+	//	u.Data["json"] = models.SuccessMsg{
+	//		Code:    500,
+	//		Message: "注册失败！",
+	//	}
+	//}
 	u.ServeJSON()
 	return
 }

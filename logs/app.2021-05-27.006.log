@@ -1,0 +1,10 @@
+2021/05/27 16:41:58.692 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/27 16:42:05.349 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    174.173µs|   match|[97;46m POST    [0m /register   r:/register
+2021/05/27 16:43:49.378 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/27 16:44:00.924 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    238.419µs|   match|[97;46m POST    [0m /register   r:/register
+2021/05/27 16:46:50.186 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    118.152µs|   match|[97;46m POST    [0m /register   r:/register
+2021/05/27 16:47:25.091 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/27 16:47:27.147 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    223.194µs|   match|[97;46m POST    [0m /register   r:/register
+2021/05/27 16:53:04.248 [I] [asm_amd64.s:1374]  http server Running on http://:8080
+2021/05/27 16:53:07.609 [D] [server.go:2843]  | 192.168.31.177|[97;42m 200 [0m|    198.828µs|   match|[97;46m POST    [0m /register   r:/register
+2021/05/27 16:54:10.062 [I] [asm_amd64.s:1374]  http server Running on http://:8080

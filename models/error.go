@@ -4,13 +4,15 @@ type errorCode int
 type errorMessage string
 
 const (
-	UNLOGIN_ERROR_CODE       errorCode = 401
-	NOT_HAVE_AUTH_ERROR_CODE errorCode = 402
-	DB_ERROR_CODE            errorCode = 500
-	USER_ERROR_CODE          errorCode = 501
-	PASSWORD_ERROR_CODE      errorCode = 502
-	TOKEN_CREATE_ERROR_CODE  errorCode = 503
-	NICK_NAME_ERROR_CODE     errorCode = 504
+	UNLOGIN_ERROR_CODE                 errorCode = 401
+	NOT_HAVE_AUTH_ERROR_CODE           errorCode = 402
+	DB_ERROR_CODE                      errorCode = 500
+	USER_ERROR_CODE                    errorCode = 501
+	PASSWORD_ERROR_CODE                errorCode = 502
+	TOKEN_CREATE_ERROR_CODE            errorCode = 503
+	NICK_NAME_ERROR_CODE               errorCode = 504
+	GET_REGIIST_USERSTATUS_ERROR_CODE_ errorCode = 505
+	GET_REGIIST_AVATARFILE_ERROR_CODE_ errorCode = 506
 )
 
 const (

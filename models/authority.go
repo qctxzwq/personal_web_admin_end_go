@@ -1,6 +1,6 @@
 package models
 
-var RouteAuthMap = make(map[string]userStatus)
+var RouteAuthMap = make(map[string]UserStatus)
 
 func InitRouteAuth() {
 	RouteAuthMap["/login"] = VISITOR
