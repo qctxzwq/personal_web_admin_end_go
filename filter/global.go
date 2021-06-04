@@ -35,8 +35,8 @@ func GlobalFilter(ctx *context.Context) {
 		if err != nil {
 			beego.Error("parse token failed,err:%v", err)
 			data := models.SystemError{
-				Code:    models.DB_ERROR_CODE,
-				Message: models.SYSTEM_ERROR_MSG,
+				Code:    models.UNLOGIN_ERROR_CODE,
+				Message: models.ErrorMessage(err.Error()),
 			}
 			_ = ctx.Output.JSON(data, true, true)
 			return

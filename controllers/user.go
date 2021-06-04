@@ -5,9 +5,8 @@ import (
 	"admin/until"
 	"encoding/json"
 	"fmt"
-	"time"
-
 	"github.com/astaxie/beego"
+	"time"
 )
 
 type UserController struct {
@@ -108,83 +107,97 @@ func (u *UserController) Register() {
 	if err != nil {
 		beego.Error("get status err:", err)
 		errRes := models.SystemError{
-			Code:    models.GET_REGIIST_USERSTATUS_ERROR_CODE_,
+			Code:    models.REGIIST_USERSTATUS_ERROR_CODE_,
 			Message: models.SYSTEM_ERROR_MSG,
 		}
 		u.Data["json"] = errRes
 		u.ServeJSON()
 		return
 	}
-	f, h, err := u.GetFile("avatar")
-	if err != nil {
-		beego.Error("get avatar file err:", err)
+	// status验证
+	if status < 0 && status > 7 {
 		errRes := models.SystemError{
-			Code:    models.GET_REGIIST_AVATARFILE_ERROR_CODE_,
-			Message: models.SYSTEM_ERROR_MSG,
+			Code:    models.PARAMS_ERROR_CODE,
+			Message: models.INVALID_STATUS_ERROR_MSG,
 		}
 		u.Data["json"] = errRes
 		u.ServeJSON()
 		return
 	}
-	defer f.Close()
-	uploadPath := models.ProCfg.String("uploadpath")
-	folderName := time.Now().Format("2006-01-02")
-	path := uploadPath + folderName + h.Filename
-	u.SaveToFile("avatar", path)
-	user := models.Register{
-		Name:     name,
-		Password: password,
-		Confirm:  confirm,
-		Status:   models.UserStatus(status),
+	// 密码、确认密码验证
+	if password != confirm {
+		errRes := models.SystemError{
+			Code:    models.PARAMS_ERROR_CODE,
+			Message: models.PARAMS_ERROR_MSG,
+		}
+		u.Data["json"] = errRes
+		u.ServeJSON()
+		return
 	}
 
-	//json.Unmarshal(u.Ctx.Input.RequestBody, &user)
-	u.Data["json"] = models.SuccessMsg{
-		Code:    0,
-		Data:    user,
-		Message: "注册成功！",
+	// 用户名长度验证
+	if len([]rune(name)) > 8 {
+		errRes := models.SystemError{
+			Code:    models.PARAMS_ERROR_CODE,
+			Message: models.USERNAME_MORELEN_ERROR_MSG,
+		}
+		u.Data["json"] = errRes
+		u.ServeJSON()
+		return
 	}
-	//var Userc models.Users
-	//json.Unmarshal(u.Ctx.Input.RequestBody, &Register)
-	//// 昵称密码不能为空
-	//if len(Register.Name) == 0 || len(Register.Password) == 0 {
-	//	errRes := models.SystemError{
-	//		Code:    models.NICK_NAME_ERROR_CODE,
-	//		Message: models.NICK_NAME_ERROR_MSG,
-	//	}
-	//	u.Data["json"] = errRes
-	//	u.ServeJSON()
-	//	return
-	//
-	//}
-	//// 用户判断
-	//models.Db.Where("name = ?", Register.Name).First(&Userc)
-	//if Userc.Id != 0 {
-	//	errRes := models.SystemError{
-	//		Code:    models.NICK_NAME_ERROR_CODE,
-	//		Message: models.NICK_NAME_ERROR_MSG,
-	//	}
-	//	u.Data["json"] = errRes
-	//	u.ServeJSON()
-	//	return
-	//}
-	//user := models.Users{
-	//	Name:     Register.Name,
-	//	Password: Register.Password,
-	//}
-	//// models.Db.Create(&Userc)
-	//if err := models.Db.Create(&user).Error; err != nil {
-	//	u.Data["json"] = models.SuccessMsg{
-	//		Code:    0,
-	//		Message: "注册成功！",
-	//	}
-	//
-	//} else {
-	//	u.Data["json"] = models.SuccessMsg{
-	//		Code:    500,
-	//		Message: "注册失败！",
-	//	}
-	//}
+
+	var userBox []models.Users
+	result := models.Db.Where("name = ?", name).Find(&userBox)
+
+	// 检索错误
+	if result.Error != nil {
+		errRes := models.SystemError{
+			Code:    models.DB_ERROR_CODE,
+			Message: models.SYSTEM_ERROR_MSG,
+		}
+		beego.Info("query user error:", result.Error)
+		u.Data["json"] = errRes
+		u.ServeJSON()
+		return
+	}
+
+	// 用户名重复验证
+	if result.RowsAffected != 0 {
+		errRes := models.SystemError{
+			Code:    models.USER_ERROR_CODE,
+			Message: models.USER_EXIST_ERROR_MSG,
+		}
+		beego.Info("user existed", name)
+		u.Data["json"] = errRes
+		u.ServeJSON()
+		return
+	}
+
+	newUser := models.Users{
+		Name:     name,
+		Avatar:   "https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png",
+		Password: until.HashAndSalt(password),
+		Status:   models.UserStatus(status),
+		Ctime:    time.Now().Unix(),
+	}
+
+	result = models.Db.Create(&newUser)
+	if result.Error != nil {
+		errRes := models.SystemError{
+			Code:    models.DB_ERROR_CODE,
+			Message: models.SYSTEM_ERROR_MSG,
+		}
+		beego.Error("create user err:", result.Error)
+		u.Data["json"] = errRes
+		u.ServeJSON()
+		return
+	}
+
+	logRes := map[string]interface{}{
+		"code":    0,
+		"message": "创建成功！",
+	}
+	u.Data["json"] = logRes
 	u.ServeJSON()
 	return
 }
@@ -233,4 +246,8 @@ func (u *UserController) All() {
 		Message: "获取用户列表成功！",
 	}
 	u.ServeJSON()
+}
+
+func (u *UserController) Update(){
+
 }
