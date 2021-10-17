@@ -18,7 +18,6 @@ func GlobalFilter(ctx *context.Context) {
 	if !(ctx.Input.URL() == "/login" || ctx.Input.URL() == "/register") {
 		//判断是否携带AUTHORIZATION字段
 		token := ctx.Input.Header("AUTHORIZATION")
-		token = token[7:]
 		beego.Debug(token)
 		// 未携带token
 		if len(token) == 0 || token == "null" {
@@ -30,6 +29,7 @@ func GlobalFilter(ctx *context.Context) {
 			_ = ctx.Output.JSON(data, true, true)
 			return
 		}
+		token = token[7:]
 		authMap, err := until.ParseToken(token)
 		// token解析失败
 		if err != nil {
